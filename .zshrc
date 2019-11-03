@@ -26,6 +26,7 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR='vim'
 
 alias cdi='cd `ls | peco`'
+alias clr='clear'
 
 #Git add changes to previous commit.
 alias gcamd='git commit --amend -am "$(git log --pretty=format:%s -1)"'
