@@ -17,12 +17,15 @@ set showmatch
 
 call plug#begin()
 Plug 'fatih/vim-go'
+Plug 'rust-lang/rust.vim'
+Plug 'vim-syntastic/syntastic'
+Plug 'majutsushi/tagbar'
 Plug 'chr4/nginx.vim'
+Plug 'elzr/vim-json'
 Plug 'stephpy/vim-yaml'
+Plug 'cespare/vim-toml'
 Plug 'vhdirk/vim-cmake'
 Plug 'vim-scripts/valgrind.vim'
-Plug 'hashivim/vim-vagrant'
-Plug 'pearofducks/ansible-vim'
 Plug 'blueshirts/darcula'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
@@ -37,6 +40,9 @@ colorscheme darcula
 
 "Always show NertTree. Switch to file.
 autocmd VimEnter * NERDTree | wincmd p
+
+"Format *.rs on save.
+let g:rustfmt_autosave = 1
 
 "Show hidden files.
 let NERDTreeShowHidden=1
