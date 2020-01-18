@@ -4,6 +4,9 @@
 set number
 set relativenumber
 
+"Update time.
+set updatetime=100
+
 "Disable backward compatibility with vi.
 set nocompatible
 
@@ -38,6 +41,7 @@ Plug 'vhdirk/vim-cmake'
 Plug 'vim-scripts/valgrind.vim'
 Plug 'blueshirts/darcula'
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'skywind3000/asyncrun.vim'
