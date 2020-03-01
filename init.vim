@@ -38,7 +38,6 @@ Plug 'elzr/vim-json'
 Plug 'stephpy/vim-yaml'
 Plug 'cespare/vim-toml'
 Plug 'vhdirk/vim-cmake'
-Plug 'vim-scripts/valgrind.vim'
 Plug 'blueshirts/darcula'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
@@ -46,6 +45,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'skywind3000/asyncrun.vim'
 Plug 'soramugi/auto-ctags.vim'
+Plug 'ycm-core/YouCompleteMe', { 'do': 'python3 ./install.py --clangd-completer && python3 ./install.py --go-completer' }
 call plug#end()
 
 "Enable 'Darcula' theme.
@@ -67,9 +67,6 @@ let g:auto_ctags = 1
 
 "Create tags file in one of these directories (priority ->).
 let g:auto_ctags_directory_list = ['.git', '.svn', '.']
-
-"Set Valgrind arguments.
-let g:valgrind_arguments = '--num-callers=500'
 
 "Format Rust files on save.
 let g:rustfmt_autosave = 1
