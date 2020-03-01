@@ -71,6 +71,9 @@ let g:auto_ctags_directory_list = ['.git', '.svn', '.']
 "Format Rust files on save.
 let g:rustfmt_autosave = 1
 
+"Remove all trailing whitespace.
+nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+
 "Tabs/spaces mapping.
 map <F8> <Esc>:set expandtab tabstop=4 shiftwidth=4<CR>
 map <F9> <Esc>:set noexpandtab tabstop=8 shiftwidth=8<CR>
