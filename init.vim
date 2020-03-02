@@ -28,8 +28,10 @@ set smartindent
 "Manage plugins.
 call plug#begin()
 Plug 'fatih/vim-go'
+Plug 'vim-scripts/c.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+Plug 'wolfgangmehner/lua-support'
 Plug 'vim-syntastic/syntastic'
 Plug 'majutsushi/tagbar'
 Plug 'chr4/nginx.vim'
@@ -45,12 +47,19 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'skywind3000/asyncrun.vim'
 Plug 'soramugi/auto-ctags.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'rodjek/vim-puppet'
 Plug 'ycm-core/YouCompleteMe', { 'do': 'python3 ./install.py --clangd-completer && python3 ./install.py --go-completer' }
 call plug#end()
 
 "Enable 'Darcula' theme.
 syntax enable
 colorscheme darcula
+
+"Enable 'minimalist' theme.
+let g:airline_theme='minimalist'
 
 "Always show NertTree. Switch to file.
 autocmd VimEnter * NERDTree | wincmd p
