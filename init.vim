@@ -65,8 +65,8 @@ let g:airline_theme='minimalist'
 autocmd VimEnter * NERDTree | wincmd p
 
 "Show hidden files.
-let NERDTreeShowHidden=1
-let g:NERDTreeShowIgnoredStatus = 1
+let NERDTreeShowHidden = 1
+let g:NERDTreeGitStatusShowIgnored = 1
 
 "Show/hide NERDTree.
 nmap <silent> <special> <F2> :NERDTreeToggle<RETURN>
