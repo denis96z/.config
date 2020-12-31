@@ -27,14 +27,14 @@ set smartindent
 
 "Manage plugins.
 call plug#begin()
-Plug 'fatih/vim-go'
 Plug 'vim-scripts/c.vim'
 Plug 'rust-lang/rust.vim'
-Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries', 'for': 'go'}
+Plug 'python-mode/python-mode', {'for': 'python', 'branch': 'develop'}
 Plug 'wolfgangmehner/lua-support'
 Plug 'wolfgangmehner/perl-support'
 Plug 'vim-syntastic/syntastic'
-Plug 'majutsushi/tagbar'
+Plug 'preservim/tagbar'
 Plug 'chr4/nginx.vim'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'elzr/vim-json'
@@ -51,7 +51,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'rodjek/vim-puppet'
-Plug 'ycm-core/YouCompleteMe', { 'do': 'python3 ./install.py --clangd-completer && python3 ./install.py --go-completer' }
+Plug 'ycm-core/YouCompleteMe', {'do': 'python3 ./install.py --all'}
 call plug#end()
 
 "Enable 'Darcula' theme.
@@ -83,6 +83,12 @@ let g:rustfmt_autosave = 1
 "Remove all trailing whitespace.
 nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
-"Tabs/spaces mapping.
+"Browse tags.
+map <F7> <Esc>:TagbarToggle<CR>
+
+"Switch between tabs/spaces.
 map <F8> <Esc>:set expandtab tabstop=4 shiftwidth=4<CR>
 map <F9> <Esc>:set noexpandtab tabstop=8 shiftwidth=8<CR>
+
+"GoTo definition.
+map <C-I> <Esc>:YcmCompleter GoTo<CR>
